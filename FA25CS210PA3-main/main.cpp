@@ -115,18 +115,24 @@ void printPath(pair<int,int> exitcell,
 
 // ----------------------------------------------------------
 // STUDENTS IMPLEMENT DFS HERE
-// Add arguments, return type, and logic
+// TODO:Add arguments, return type, and logic
+// TODO:Recursive method
 // ----------------------------------------------------------
-// bool dfs(……) {
-//     // Your code here
-// }
+/// NOTE: make Depth-First Search(DFS)
+/// has 8 inputs based off main : dfs(ent_r, ent_c, maze, visited, parent_r, parent_c, exit_r, exit_c)
+bool dfs() {
+    // Your code here
+
+
+    return false; // default for now
+}
 
 
 // ----------------------------------------------------------
 // MAIN PROGRAM (students add DFS calls and logic)
 // ----------------------------------------------------------
 int main() {
-    int N, M;
+    int N, M; // height/width?
 
     cout << "Enter maze dimensions N M: ";
     cin >> N >> M;
@@ -157,13 +163,15 @@ int main() {
 
     // ------------------------------------------------------
     // STUDENT WORK:
-    // Call your DFS, track visited, and fill parent_r and parent_c
+    // TODO: Call your DFS, track visited, and fill parent_r and parent_c
     // ------------------------------------------------------
     // bool found = dfs(ent_r, ent_c, maze, visited, parent_r, parent_c, exit_r, exit_c);
 
+
+
     // ------------------------------------------------------
     // STUDENT WORK:
-    // If found, print the path
+    // TODO: If found, print the path
     // ------------------------------------------------------
     // if (found) {
     //     printPath(exitcell, parent_r, parent_c, ent_r, ent_c);
