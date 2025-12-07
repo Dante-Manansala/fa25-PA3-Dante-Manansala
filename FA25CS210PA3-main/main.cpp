@@ -148,8 +148,18 @@ bool dfs(int ent_r, int ent_c,
         // created for easier reading
         int ar = ent_r + dr[x]; //adjacent row
         int ac = ent_c + dc[x]; //adjacent column
-        
+
+        ///NOTE: maybe add wall and visit check here? help fix more runtime errors, unsure why
+        // realized was running to problem of bounds here with loading parent.
+        // if not in bounds, skip (helps avoid bound errors)
+        if (ar < 0 || ar >= maze.size() || ac < 0 || ac >= maze[0].size()) continue;
+        // if current == wall, skip
+        if (maze[ar][ac] == 1) continue;
+        // if visited == true, skip
+        if (visited[ar][ac]) continue;
+
         // mark parents for adjacent/new cell in recursion
+        // Used to backtrack when printing printPath
         parent_r[ar][ac] = ent_r;
         parent_c[ar][ac] = ent_c;
 
